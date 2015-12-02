@@ -1,8 +1,6 @@
-<p><h2>Welcome!</h2>
+<p><h2>Your shopping list:</h2>
 
-<p>Where would you like to go?
-
-<p><li><a href=/items>Items</a></li>
-  <li><a href=/users>Users</a></li>
-    <li><a href=/sales>Sales</a></li>
-      <li><a href=/faq>FAQ</a></li>
+      <% @item.each do |inc| %>
+            <li><%= inc.name %> - <%= inc.quantity %> - <a href='/destroy/<%= inc.id %>'>Destroy</a>
+            </li>
+      <% end %>

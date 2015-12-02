@@ -1,0 +1,14 @@
+<h2>Remove Item</h2>
+
+Are you sure you want to remove <%= @item.name.downcase %> from your shopping list?
+<p>
+<form action="/destroy" method="post">
+  <input type="hidden" name="id" value="<%= @item.id %>">
+  <input type="submit" value="Yes, remove!">
+</form>
+</p>
+<p>
+<form action="/" method="get">
+  <input type="submit" value="No, take me back to my list.">
+</form>
+</p>
