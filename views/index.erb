@@ -1,6 +1,6 @@
 <p><h2>Your shopping list:</h2>
 
       <% @item.each do |inc| %>
-            <li><%= inc.name %> - <%= inc.quantity %> - <a href='/destroy/<%= inc.id %>'>Destroy</a>
+            <li><%= inc.name %> - <%= inc.quantity %> - <a href='/destroy/<%= inc.id %>'>Destroy</a> - <a href='/update/<%= inc.id %>'>Update</a>
             </li>
       <% end %>

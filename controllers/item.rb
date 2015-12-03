@@ -30,5 +30,21 @@ get '/destroy/:id' do
     erb :index
   end
 
+  #update
+  get '/update/:id' do
+    #  return Task.find(params[:id])
+     @item = Item.find(params[:id])
+    erb :update
+  end
+
+  post '/update' do
+    @item = Item.find(params[:id])
+    @item.name = params[:name]
+    @item.quantity = params[:quantity]
+    @item.save
+    @item = Item.all
+    erb :index
+  end
+
 
 end
