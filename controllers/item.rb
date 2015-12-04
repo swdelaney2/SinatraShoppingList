@@ -46,4 +46,16 @@ get '/destroy/:id' do
   end
 
 
+# ATTEMPTING TO CALL METHODS FROM ACCOUNT CLASS
+
+  def initialize
+    @instance_of_account_class = AccountController.new
+  end
+
+# Call the authorization check on the ItemController with auth_check
+  def auth_check
+    @AccountController.authorization_check
+  end
+
+
 end
