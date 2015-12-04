@@ -1,6 +1,6 @@
 class Account < ActiveRecord::Base
 
-  include Bcrypt
+  include BCrypt
 
 # PASSWORD SETTER
 def password=(pass)

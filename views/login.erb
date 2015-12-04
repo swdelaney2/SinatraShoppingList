@@ -8,10 +8,12 @@
 <% if @message %>
 <li><%= @message %></li>
 <% end %>
-<form class="" action="index.html" method="post">
-  <p><input type="text" name="email" placeholder="E-mail address"></p>
-  <p><input type="text" name="password" placeholder="Password"></p>
-<input type="button" name="submit" value="Submit">
+<form action="/account/login" method="post">
+
+  <p><input type="text" name="user_name" placeholder="Username"></p>
+  <p><input type="password" name="password" placeholder="Password"></p>
+  <input type="submit" value="Submit">
+
 </form>
 
 

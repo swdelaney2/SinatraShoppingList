@@ -1,31 +1,31 @@
 class AccountController < ApplicationController
 
-  ActiveRecord::Base.establish_connection(
-    :database => 'shopping_account',
-    :adapter => 'postgresql'
-  )
+  # ActiveRecord::Base.establish_connection(
+  #   :database => 'shopping_account',
+  #   :adapter => 'postgresql'
+  # )
 
-
-enable :sessions
-
-# CHECK IF USERNAME ALREADY EXISTS
-def does_user_exist(username)
-  user = Account.find_by(:user_name => username) #Note to self -- this is not searching params, this searching the database for the :user_name column
-  if user #does it exist?
-    return true
-  else
-    return false
-  end
-end
-
-# AUTHORIZATION CHECK - FOR ALL PROTECTED PAGES
-def authorization_check
-  if session[:current_user] == nil
-    redirect '/not_authorized'
-  else
-    return true
-  end
-end
+  # enable :sessions
+  #
+  # # CHECK IF USERNAME ALREADY EXISTS
+  # def does_user_exist(username)
+  #   user = Account.find_by(:user_name => username)
+  #    #Note to self -- this is not searching params, this searching the database for the :user_name column
+  #   if user #does it exist?
+  #     return true
+  #   else
+  #     return false
+  #   end
+  # end
+  #
+  # # AUTHORIZATION CHECK - FOR ALL PROTECTED PAGES
+  # def authorization_check
+  #   if session[:current_user] == nil
+  #     redirect '/not_authorized'
+  #   else
+  #     return true
+  #   end
+  # end
 
 get '/register' do
   erb :register
@@ -63,10 +63,6 @@ else
 end
 end
 
-get '/error_login' do
-erb :error_login
-end
-
 get '/error_register' do
   erb :error_register
 end
@@ -74,7 +70,7 @@ end
 get '/logout' do
   authorization_check
   session[:current_user] = nil
-  redirect '/'
+  erb :logged_out
 end
 
 
@@ -98,12 +94,12 @@ end
 
 ##DELETE?
 
-get '/' do
-  authorization_check
-@user_name = session[:current_user].user_name
-  @item = Item.all
-  erb :index
-end
+# get '/' do
+#   authorization_check
+# @user_name = session[:current_user].user_name
+#   @item = Item.all
+#   erb :index
+# end
 
 
 

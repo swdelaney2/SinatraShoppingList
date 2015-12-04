@@ -1,4 +1,4 @@
-<p><h2>Your shopping list:</h2>
+<p><h2><%= @user_name %>'s shopping list:</h2>
 
       <% @item.each do |inc| %>
             <li><%= inc.name %> - <%= inc.quantity %> - <a href='/destroy/<%= inc.id %>'>Destroy</a> - <a href='/update/<%= inc.id %>'>Update</a>
