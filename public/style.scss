@@ -3,6 +3,19 @@
   margin: 1em;
 }
 
+#layoutfooter {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
 body {
   background: rgb(203, 230, 182);
+}
+
+.not_authorized_page {
+  width: 30%;
+  border: 1px black solid;
+  float: left;
+  margin-left: 1em;
 }
