@@ -23,6 +23,4 @@ def self.authenticate(user_name, password)
 end
 
 
-
-
 end

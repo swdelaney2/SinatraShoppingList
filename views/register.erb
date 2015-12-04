@@ -1,6 +1,10 @@
 
     <h1>Welcome!</h1>
     <p>New to ShopApp? Register here:</p>
+
+    <% if @taken %>
+    <p><li><%= @taken %></li></p>
+    <% end %>
     <p>
 
 <form action="/register" method="post">

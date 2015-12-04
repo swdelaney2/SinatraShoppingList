@@ -1,6 +1,8 @@
 class ItemController < ApplicationController
 
 get '/' do
+  auth_check
+@user_name = session[:current_user].user_name
   @item = Item.all
   erb :index
 end

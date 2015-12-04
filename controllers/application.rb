@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
     :adapter => 'postgresql'
   )
 
+  # ActiveRecord::Base.establish_connection(
+  #   :database => 'shopping_account',
+  #   :adapter => 'postgresql'
+  # )
+
   set :views, File.expand_path('../../views', __FILE__)
   set :public, File.expand_path('../../public', __FILE__)
 

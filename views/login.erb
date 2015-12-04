@@ -5,6 +5,9 @@
     <p>Please enter your log-in details:</p>
     <p>
 
+<% if @message %>
+<li><%= @message %></li>
+<% end %>
 <form class="" action="index.html" method="post">
   <p><input type="text" name="email" placeholder="E-mail address"></p>
   <p><input type="text" name="password" placeholder="Password"></p>
