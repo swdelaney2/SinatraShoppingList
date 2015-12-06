@@ -9,6 +9,7 @@ get '/' do
 end
 
 get '/create' do
+  authorization_check
   erb :create
 end
 
@@ -24,6 +25,7 @@ post '/create' do
 end
 
 get '/destroy/:id' do
+  authorization_check
     @item = Item.find(params[:id])
     erb :destroy
   end

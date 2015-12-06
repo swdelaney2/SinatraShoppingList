@@ -1,19 +1,53 @@
 .lifooter {
   display: inline;
-  margin: 1em; }
+  margin: 1em;
+  padding-left: 5em; }
+
+li {
+  list-style-type: circle; }
 
 #layoutfooter {
   width: 100%;
   float: left;
-  clear: both; }
+  clear: both;
+  margin-top: 2em;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-radius: 10%;
+  padding-bottom: 1em; }
+
+.main {
+  background: #fff6e5;
+  width: 50%;
+  border: 1px black solid;
+  padding: 1em;
+  border-radius: 10%; }
 
 body {
-  background: #cbe6b6; }
+  background: #3e454c; }
+
+h1 {
+  text-align: center; }
+
+h1, h2 {
+  font-family: 'Roboto Slab', serif;
+  color: #2185c5; }
 
 .not_authorized_page {
+  background: #fff6e5;
   width: 30%;
   border: 1px black solid;
+  border-radius: 10%;
+  padding: 1em;
+  border-top: 0px;
   float: left;
-  margin-left: 1em; }
+  margin-top: 2em;
+  margin-left: 10%; }
+
+a {
+  color: #7ecefd; }
+
+a:visited {
+  color: #ff7f66; }
 
 /*# sourceMappingURL=style.css.map */
